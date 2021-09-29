@@ -1,0 +1,343 @@
+::root {
+  --elevation-high: 0 8px 16px rgba(0,0,0,0.24);
+}
+$profile-bg: #18191C;
+$dnd: #ED4245;
+$discord-bg: #36393F;
+
+// Status Icons
+$icon-online: "https://raw.githubusercontent.com/asty8926/icons/5f95e145ebfc5c65fb803db267c9832c67c004ec/status/online.svg";
+$icon-idle: "https://raw.githubusercontent.com/asty8926/icons/5f95e145ebfc5c65fb803db267c9832c67c004ec/status/idle.svg";
+$icon-dnd: "https://raw.githubusercontent.com/asty8926/icons/5f95e145ebfc5c65fb803db267c9832c67c004ec/status/online.svg";
+$icon-offline: "https://raw.githubusercontent.com/asty8926/icons/5f95e145ebfc5c65fb803db267c9832c67c004ec/status/offline.svg";
+
+// Badges SVGs
+$badge-staff: "https://discord.com/assets/f62be1ec9bdd82d3d77158ad81830e68.svg";
+$badge-mod: "https://discord.com/assets/2af69d4f9d2ff38a7cf76fab0907ea7a.svg";
+$badge-dev: "https://discord.com/assets/877dc8bece1590e63fac6d5a0cd2a225.svg";
+$badge-early-supporter: "https://discord.com/assets/d66ce47c4ab7817190af9544f97e98cc.svg";
+$badge-nitro: "https://discord.com/assets/e04ce699dcd2fd50d352a384511687a9.svg";
+$badge-bug-hunter: "https://discord.com/assets/46f6a28f462889f1a36cfca2591fcade.svg";
+$badge-partnered-server-owner: "https://discord.com/assets/53828e0c0fb6676440ad11b5d2586241.svg";
+$badge-booster: "https://discord.com/assets/556158300f0dca136d3c902586ff1316.svg";
+
+
+// HypeSquad
+$badge-brilliance: "https://discord.com/assets/473dadec13ab7e90e209cc60fccb31c5.svg";
+$badge-balance: "https://discord.com/assets/58f11abcf3c13812bff969baaeb84d82.svg";
+$badge-bravery: "https://discord.com/assets/995ecfdbdf94ad84dd4d802c104e4630.svg";
+
+$badge-hypesquad-events: "https://.discord.com/assets/f5354673c9cff61c1dcc70081ef774e5.svg";
+
+$font-primary: /*Whitney, */"Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$header-secondary: #b9bbbe;
+
+/** {
+  box-sizing: border-box;
+}*/
+
+a, button, div, input, label, select, span, strong, textarea {
+ outline: 0; 
+}
+
+a, abbr, acronym, address, applet, big, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, table, tbody, td, tfoot, th, thead, tr, tt, ul, var {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+div {
+  display: block;
+}
+
+body {
+  // Places the item in the middle of the page
+  margin: 0;
+	background: $discord-bg;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  
+  font-family: $font-primary;
+  text-rendering: optimizeLegibility;
+}
+
+.profile {
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: calc(100vh - 20px);
+  box-shadow: var(--elevation-high);
+  background: $profile-bg;
+  padding-bottom: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+$blade: "https://cdn.discordapp.com/banners/364935263828574232/a_66ddd9b4713163cf9dcc0d2d784b80e1.gif?size=2048";
+$blade-closer: "https://cdn.discordapp.com/banners/364935263828574232/a_66ddd9b4713163cf9dcc0d2d784b80e1.gif?size=2048";
+$sakura: "https://cdn.discordapp.com/banners/364935263828574232/a_66ddd9b4713163cf9dcc0d2d784b80e1.gif?size=2048";
+$cyber: "https://cdn.discordapp.com/banners/364935263828574232/a_66ddd9b4713163cf9dcc0d2d784b80e1.gif?size=2048";
+$car: "https://cdn.discordapp.com/banners/364935263828574232/a_66ddd9b4713163cf9dcc0d2d784b80e1.gif?size=2048";
+
+$asty-pfp: "https://cdn.discordapp.com/avatars/149926720114262016/a_3a356de7534cf712bf35fa6fed059af8.png";
+$asty-pfp: "https://cdn.discordapp.com/avatars/149926720114262016/038881035b992eb71296fb796d47d091.png";
+//$noah-pfp: "https://cdn.discordapp.com/attachments/345926635993694208/864814954426007562/1.png";
+$noah-pfp: "https://cdn.discordapp.com/avatars/364935263828574232/a_7cf603dc2306a0740b4cead248f69d50.gif?size=1024";
+
+.banner {
+  background:
+    url($blade-closer);
+  
+  width: inherit;
+  //width: 512px;
+  height: 120px;
+  position: absolute;
+  cursor: pointer;
+  
+  background-repeat: no-repeat;
+  //background-position: 50%;
+  /*background-position: center center;*/
+  background-size: cover;
+  
+    & .change-banner {
+      pointer-events: none;
+      visibility: hidden;
+      color: white;
+      font-family: inherit;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      vertical-align: middle;
+      position: absolute;
+      inset: 0;
+      /*text-transform: uppercase;
+      font-size: 12px;
+      line-height: 12px;*/
+    }
+  
+  &:hover {
+    box-shadow: inset 0 0 120px rgb(0 0 0 / 75%);
+    
+    & .change-banner {
+      visibility: visible;
+    }
+  }
+} // bg props
+
+
+
+.avatar {
+  &__wrapper {
+    z-index: 102;
+    //background: red;
+
+    position: absolute;
+    position: relative;
+    top: 75px;
+    left: 16px;
+    overflow: hidden;
+    //cursor: pointer;
+    pointer-events: none;
+  }
+  pointer-events: all;
+  z-index: 101;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background: 
+    url(
+      $noah-pfp
+    );
+  background-size: cover;
+  //background: red;
+  border: 6px solid $profile-bg;
+  cursor: pointer;
+  
+  & .change-avatar {
+      visibility: hidden;
+    
+      max-width: 90px;
+    
+      font-family: inherit;
+      font-size: 10px;
+      box-sizing: border-box;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 12px;
+      text-align: center;
+      white-space: pre;
+      //word-wrap: pre-wrap;
+      //word-break: break-all;
+
+      position: absolute;
+      inset: 0;
+      //left: -50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      color: white;
+  }
+  
+  &:hover {
+    box-shadow: inset 0 0 120px rgb(0 0 0 / 75%);
+    
+    & .change-avatar {
+      visibility: visible;
+    }
+  }
+}
+
+.status-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  // The secondary background makes sure it is applied on the transparency of the first one
+  background: url($icon-dnd), $profile-bg; 
+  //transform-origin: 0px 0px;
+  float: right;
+  top: 55px;
+  border-radius: 50%;
+  border: 6px solid $profile-bg;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.headerTop {
+    padding-bottom: 12px;
+    flex-shrink: 0;
+    //padding: 64px 16px 16px;
+    padding: 90px 16px 16px;
+    overflow: hidden;
+    position: relative;
+    pointer-events:none;
+
+    & .badges {
+      position: absolute;
+      top: 16px;
+      right: 10px;
+      min-width: 100px;
+      max-width: 180px;
+      max-width: 185px;
+      //-webkit-box-pack: end;
+      justify-content: flex-end;
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -2px;
+      margin-bottom: -2px;
+      margin-top: 25px;
+      pointer-events: all;
+
+      & .badge {
+        cursor: pointer;
+        margin: 0 2px 2px 0;
+        pointer-events: all;
+      }
+    }
+
+    & .headerText {
+      pointer-events: all;
+
+      & .nickname {
+        background: none;
+        border: none;
+        
+        font-family: inherit;
+        margin: 0;
+        padding: 0;
+        
+        word-break: break-all;
+        font-weight: 600;
+        color: white;
+        font-size: 20px;
+        line-height: 24px;
+
+      }
+
+      & .headerTag {
+        margin-top: 0.3em;
+        line-height: 18px;
+        font-size: 14px;
+        font-weight: 500;
+        display: block;
+        
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        
+        & .username {
+          background: none;
+          border: none;
+          margin: 0;
+          padding: 0;
+          
+          font-family: inherit;
+          width: auto;
+          
+          overflow: auto;
+          word-break: break-all;
+          text-overflow: unset;
+          white-space: normal;
+          color: $header-secondary;
+          vertical-align: top;
+          display: inline;
+          
+          -webkit-box-flex: 0;
+          
+          flex: 0 1 auto;
+        }
+
+        & .discrim {
+          color: $header-secondary;
+          vertical-align: top;
+        }
+
+      }
+  }
+}
+
+.test {
+  background: red;
+  width: 200px;
+  height: 150px;
+}
+
+// Removes the outline/border around a focused contenteditable DOM Element.
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+// Removes the arrows on the number input
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.discrim-input {
+  color: $header-secondary;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+p::text2 {
+    color: white;
+    text-shadow: 1px 1px #fff;
+}
