@@ -311,11 +311,10 @@ $noah-pfp: "https://cdn.discordapp.com/avatars/364935263828574232/a_7cf603dc2306
   height: 150px;
 }
 
-// Removes the outline/border around a focused contenteditable DOM Element.
 [contenteditable] {
   outline: 0px solid transparent;
 }
-// Removes the arrows on the number input
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
