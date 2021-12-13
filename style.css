@@ -1,11 +1,7 @@
 :root {
 	 --elevation-high: 0 8px 16px rgba(0, 0, 0, 0.24);
 }
-/*Whitney, */
-/** {
-	 box-sizing: border-box;
-}
-*/
+
  a, button, div, input, label, select, span, strong, textarea {
 	 outline: 0;
 }
@@ -50,8 +46,6 @@
 	 position: absolute;
 	 cursor: pointer;
 	 background-repeat: no-repeat;
-	/*background-position: center center;
-	*/
 	 background-size: cover;
 }
  .banner .change-banner {
@@ -66,10 +60,6 @@
 	 vertical-align: middle;
 	 position: absolute;
 	 inset: 0;
-	/*text-transform: uppercase;
-	 font-size: 12px;
-	 line-height: 12px;
-	*/
 }
  .banner:hover {
 	 box-shadow: inset 0 0 120px #000;
